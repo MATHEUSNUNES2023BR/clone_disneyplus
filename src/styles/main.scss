@@ -1,4 +1,20 @@
-$bgColor: rgb(255, 0, 0);
-body{
-    background: $bgColor;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+$corDeFundo: #040714;
+$corTextoPrincipal: silver;
+$corTextoSecundario: #f9f9f9;
+
+body{
+    background-color: $corDeFundo;
+}
+
+@mixin text($fontSize: 16px){
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color:$corTextoPrincipal;
+}   
+
