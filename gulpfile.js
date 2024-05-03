@@ -3,13 +3,13 @@ const sass = require('gulp-sass')(require('sass'));
 const imagemin = require('gulp-imagemin')
 
 function styles(){
-    return gulp.src('./src/styles/*.scss', { encoding: false })
+    return gulp.src('./src/styles/*.scss')
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(gulp.dest('./dist/css'))
 }
-    
+
 function images(){
-    return gulp.src('./src/images/**/*')
+    return gulp.src('./src/images/**/*', { encoding: false })
         .pipe(imagemin())
         .pipe(gulp.dest('./dist/images'));
 }
