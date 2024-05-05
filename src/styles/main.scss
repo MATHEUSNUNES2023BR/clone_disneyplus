@@ -24,7 +24,11 @@
     font-family: Avenir, sans-serif;
     list-style: none;
 }
-
+@media (max-width: 768px) {
+    html{
+        font-size: 12px;
+    }
+}
 body{
     background-color: variaveis.$corDeFundo;
 }
@@ -105,6 +109,9 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    @media (max-width:768px){
+        display: block;
+    }
 
     img{
         max-width: 100%;
@@ -130,6 +137,12 @@ body{
             display: flex;
             flex-direction: column;
             justify-content: center;
+            @media (max-width:768px){
+                display: block;
+                position: relative;
+                left: 0;
+                width: 100%;
+            }
         }
     }
 }

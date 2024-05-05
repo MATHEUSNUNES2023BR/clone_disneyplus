@@ -6,7 +6,7 @@
     background-color: transparent;
     z-index: 1;
     transition: background-color 0.5s ease;
-
+    
     &--is-hidden{
         background-color: transparent;
         transition: background-color 0.5s ease;
@@ -22,18 +22,34 @@
         padding: 0.5rem 2.25rem;
         display: flex;
         justify-content: space-between;
+
+        @media (max-width: 768px){
+            padding: 0 12px 0 20px;
+        }
     }
     &__logo{
         max-width: 5rem;
         width: 100%;
         margin: 0.32rem;
         transition: opacity 0.5s ease;
+        @media (max-width: 768px){
+            max-width: 64px;
+        }
     }
     &__links{
         display: flex;
+        margin-top: 0.5rem;
         &__item{
             transition: opacity 0.5s ease;
             margin: 0.32rem;
+        }
+    }
+    .button{
+        height: 50px;
+        @media (max-width: 768px){
+            padding: 8px 11px;
+            height: 40px;
+            letter-spacing: 0;
         }
     }
 }

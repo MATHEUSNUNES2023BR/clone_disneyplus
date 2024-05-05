@@ -10,6 +10,9 @@
         &--is-active{
             display: grid;
         }
+        @media (max-width:768px){
+            grid-template-columns: 1fr 1fr;
+        }
         &__item{
             img{
                 border-radius: 0.25rem;
@@ -20,6 +23,11 @@
    &__tabs, #nav{
         display: flex;
         justify-content: center;
+        @media (max-width: 768px){
+            white-space: nowrap;
+            overflow-x: scroll;
+            padding-left:12px;
+        }
         &__button{
             border: none;
             background: none;
